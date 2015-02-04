@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   AssetManager.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsierra- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/02/04 03:21:24 by nsierra-          #+#    #+#             */
-/*   Updated: 2015/02/04 04:45:04 by nsierra-         ###   ########.fr       */
+/*   Created: 2015/02/04 03:19:00 by nsierra-          #+#    #+#             */
+/*   Updated: 2015/02/04 03:27:37 by nsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Game.hpp"
+#ifndef __ASSET_MANAGER_HPP__
+# define __ASSET_MANAGER_HPP__
 
-int		main(void)
-{
-	Game game;
+# include <list>
 
-	game.loop();
-	return (0);
-}
+template<typename T>
+class		AssetManager {
+	public:
+		static void		
+
+	private:
+		AssetManager();
+		static std::list<T>		_assets;
+};
+
+#endif

@@ -1,21 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Game.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsierra- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/02/04 03:21:24 by nsierra-          #+#    #+#             */
-/*   Updated: 2015/02/04 04:45:04 by nsierra-         ###   ########.fr       */
+/*   Created: 2015/02/04 04:04:50 by nsierra-          #+#    #+#             */
+/*   Updated: 2015/02/04 04:54:26 by nsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <fstream>
 #include "Game.hpp"
+#include "NCursesDisplay.hpp"
 
-int		main(void)
+Game::Game()
 {
-	Game game;
+	initializeDisplay();
+}
 
-	game.loop();
-	return (0);
+void	Game::loop(void)
+{
+	while (42)
+	{
+		_display->draw();
+	}
+}
+
+void	Game::initializeDisplay(void)
+{
+	_display = new NCursesDisplay();
+	_display->draw();
 }
